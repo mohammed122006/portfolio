@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f3;
+            color: #0a0a0a;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #024442;
+            color: #d1dada;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 2px solid #191a1b;
+            position: sticky;
+            top: 0;
+            z-index: 1000%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 0.5rem 0 1rem 0;
+            font-size: 1.2rem;
+            color: #e0e0e0;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 1rem;
+        }
+
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        header nav ul li a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #1e1e1d;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        header nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            padding: 4rem 1rem;
+            margin: 2rem auto;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        section h2 {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #181818;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project {
+            background: #ffffff;
+            margin: 1rem;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(30% - 2rem);
+            box-sizing: border-box;
+            border: 1px solid #dddddd;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 2px solid #dddddd;
+            padding-bottom:1rem;
+            margin-bottom: 1rem;
+        }
+
+        .project h3 {
+            margin: 0 0 0.5rem 0;
+            font-weight: 400;
+        }
+
+        footer {
+            background: #024442;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            border-top: 2px solid  #024442;
+            margin-top: 4rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        form label {
+            margin-top: 1rem;
+            color: #555555;
+            text-align: left;
+        }
+
+        form input, form textarea {
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            border: 1px solid #dddddd;
+            background: #ffffff;
+            color: #333333;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        form button {
+            margin-top: 1.5rem;
+            padding: 0.75rem;
+            background:  #024442;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background:  #024442;
+        }
+
+        .skills, .experience {
+            margin-bottom: 8%;
+        }
+
+        .skills ul, .experience ul {
+            list-style: none;
+            padding: 50px;
+            margin: 0 auto;
+            max-width: 90%;
+            text-align: left;
+        }
+
+        .skills ul li, .experience ul li {
+            margin: 0.5rem 0;
+            padding: 3%;
+            background: #fcfcfc;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(19, 18, 18, 0.1);
+        }
+
+        .experience ul li h3 {
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .experience ul li p {
+            margin: 0.5rem 0 0 0;
+        }.experience {
+    margin-bottom: 1rem; /* Adjust as needed */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mr.Mohammed Burhan</h1>
+        <p>-WEB DEVELOPER-</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a seasoned web developer specializing in front-end and back-end technologies such as HTML, CSS, JavaScript, and frameworks like React and Node.js. With over [X years] of hands-on experience, I have honed my skills in creating intuitive, visually appealing websites that prioritize user experience and functionality. My approach blends a strong foundation in coding with a keen eye for design, ensuring every project I undertake is both aesthetically pleasing and technically sounds.Throughout my career, I have successfully collaborated with cross-functional teams to deliver projects on time and within budget. My portfolio includes developing responsive web applications, optimizing site performance, and integrating third-party APIs to enhance functionality. I am passionate about staying abreast of industry trends and best practices, continually expanding my knowledge to incorporate the latest advancements into my work.Beyond technical proficiency, I thrive in dynamic environments where creativity and problem-solving skills are valued. I am dedicated to delivering robust, scalable solutions tailored to meet the unique needs of each project. From initial concept to final implementation, I am committed to exceeding client expectations and achieving exceptional results. </p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <ul>
+                <li><b>HTML & CSS</b> - Codecademy , Bangalore </li>
+                <li><b>JavaScript</b>  -  Besant Technologies , Chennai</li>
+                <li><b>SQL</b> -  Corizo , Chennai</li>
+                <li> <b>Node.js</b> - Codecademy , Bngalore</li>
+                <li> <b>Python</b> - Corizo , Chennai</li>
+                <li> <b>Git & GitHub</b> - Besant Technologies , Chennai</li>
+            </ul>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="gallery">
+            <div class="project">
+                <img src="https://cdn.timify.com/compressed/uploads/v2blogarticles/B_11_Must_Have_Software_Tools_2x-20240122114244-674.png" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>It’s good project management to allow and encourage a team to communicate. This doesn’t have to be on a work theme all the time. So, nurture a climate of trust. Allow banter and chat, but ensure everyone realizes that this isn’t in place of work. It’s alongside it.It’s an excellent idea to box the business day into productive chunks of time. </p>
+            </div>
+            <div class="project">
+                <img src="https://cdn.timify.com/compressed/uploads/v2blogarticles/A_10_Ways_To_Enhance_Web_Development_Team_Productivity_2x-20230831172136-707.png" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>It’s worth keeping your team aware of this. Conduct regular discussion sessions about best work practices and people’s workload. Ensure team members aren’t stretched too thin or focusing too much on any one project.It’s an excellent idea to box the business day into productive chunks of time. This is particularly beneficial for web developers whose tasks can be time-consuming. </p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience">
+            <ul>
+                <li>
+                    <h3>Web Developer at Company A</h3>
+                    <p>June 2020 - Present</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis lorem vitae bibendum facilisis.</p>
+                </li>
+                <li>
+                    <h3>Front-End Developer at Company B</h3>
+                    <p>January 2018 - May 2020</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis lorem vitae bibendum facilisis.</p>
+                </li>
+                <!-- Add more experience items as needed -->
+            </ul>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 John Doe. All rights reserved
+        </p> </footer> </body> </html> 
